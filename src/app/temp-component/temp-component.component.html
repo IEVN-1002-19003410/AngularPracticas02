@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-6">
+        <div class="mb-3">
+            <h3>Convetidor de Temperatura</h3>
+            <br>
+            <h6>Instrucciones: Debes de ingresar la cantidad de grados</h6>
+            <h6>sin necesidad de mencionar si son Fahrenheit o Celsius,</h6>
+            <h6>no te preocupes, al seleccionar a lo que quieres convertir,</h6>
+            <h6>automaticamente el programa sabra en que termino esta. :D</h6>
+            <br>
+            <label class="form-label" for="">Ingresa Temperatura</label>
+            <input type="text" class="form-control" [(ngModel)]="grado" name="grado" placeholder="Cantidad">
+        </div>
+        <div class="mb-3">
+            <div>
+                <div>
+                    <label class="form-label" for="">¿A que decides convertir?</label>
+                </div>
+                <label name="opcion">
+                    <input type="radio" name="opcion" value="1" [(ngModel)]="opcion" >Fahrenheit
+                    <input type="radio" name="opcion" value="2" [(ngModel)]="opcion">Celsius
+                </label>
+            </div>
+            <button (click)="resultadoOpcion()" class="btnbtn-primary">Calcular</button>
+        </div>
+    </div>
+    <div class="col-6">
+        <h2>Tu conversion es: {{resultado}} ° {{Termino}}</h2>
+    </div>
+</div>
