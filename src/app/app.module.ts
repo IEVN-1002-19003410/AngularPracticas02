@@ -4,15 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { TempComponentComponent } from './temp-component/temp-component.component';
 import { FormsModule } from '@angular/forms';
+import { OperaMultiComponent } from './operaMulti/opera-multi/opera-multi.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material/material.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TempComponentComponent
+    TempComponentComponent,
+    OperaMultiComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

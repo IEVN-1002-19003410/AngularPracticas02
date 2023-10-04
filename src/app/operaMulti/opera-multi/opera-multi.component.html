@@ -1,0 +1,24 @@
+<div>
+    <div class="container">
+        <div>
+            <br>
+            <label for="numero">Numero 1:</label>
+            <mat-form-field>
+                <input type="number" [(ngModel)]="veces" id="veces" name="veces">
+            </mat-form-field>
+        </div>
+        <div>
+            <label for="veces">Número 2:</label>
+            <mat-form-field>
+                <input type="number" [(ngModel)]="numero" id="numero" name="numero">
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary" class="button" (click)="calcular()">Calcular</button>
+    </div>
+    <div class="container">
+        <div *ngIf="resultadoOperacion !== ''">
+            <p>Tu operacion seria: {{ resultadoOperacion }}</p>
+            <p>Este es tu resultado: {{ resultadoSuma }}</p>
+        </div>
+    </div>
+</div>
