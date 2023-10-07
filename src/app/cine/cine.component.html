@@ -1,0 +1,37 @@
+<div class="fondo">
+    <div class="form-row">
+        <br>
+        <h1 class="titulo">Cinepolis</h1>
+        <div class="container">
+            <br>
+            <h2>Entradas</h2><br>
+            <label for="name">Nombre: </label>
+            <input type="text" id="name" [(ngModel)]="nombre" name="nombre" required><br><br>
+
+            <label for="totalCabezas">Cantidad de compradores: </label>
+            <input type="number" id="totalPersonas" [(ngModel)]="compradores" name="totalPersonas" required><br><br>
+
+            <p>Tiene un 10% de descuento si cuenta con Tarjeta Cineco</p>
+            <label>¿Cuenta con la Tarjeta Cineco?</label><br><br>
+            <input class="radioButton" type="radio" [(ngModel)]="tarjetaseleccionada" name="tieneTarjeta" value="Si"> Sí tiene<br>
+            <input class="radioButton" type="radio" [(ngModel)]="tarjetaseleccionada" name="tieneTarjeta" value="No"> No tiene<br><br>
+
+            <label for="totalBoletas">Cantidad de boletos: </label>
+            <input type="number" id="totalBoletas" [(ngModel)]="boletos" name="totalBoletas" required><br><br>
+
+
+        </div>
+        <div class="cont">
+            <button mat-raised-button color="primary" (click)="Calcular()">Calcular</button>
+            <button mat-raised-button color="primary" (click)="Limpiar()">Limpiar</button>
+        </div>
+
+    </div>
+    <div class="container2">
+        <h2>Salidas</h2>
+        <p>Nombre de la Orden: {{ nombre }}</p>
+        <p>Precio unitario del Boleto: $12</p>
+        <p>Total de boletos: {{ boletos }}</p>
+        <p>Valor a Pagar: ${{ totalDescuento }}</p>
+        <p>{{ error }}</p>
+    </div>

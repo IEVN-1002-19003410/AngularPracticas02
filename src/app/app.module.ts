@@ -7,12 +7,14 @@ import { FormsModule } from '@angular/forms';
 import { OperaMultiComponent } from './operaMulti/opera-multi/opera-multi.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material/material.module';
+import { CineComponent } from './cine/cine.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TempComponentComponent,
-    OperaMultiComponent
+    OperaMultiComponent,
+    CineComponent
   ],
   imports: [
     BrowserModule,
